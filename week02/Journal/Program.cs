@@ -5,7 +5,7 @@ using System.IO;
 
 class Program
 {
-    
+
 
     static void Main(string[] args)
     {
@@ -20,8 +20,8 @@ class Program
             Console.WriteLine("4. Load from file");
             Console.WriteLine("5. Quit");
             input = Console.ReadLine();
-            
-            
+
+
             if (input == "1")
             {
                 myJournal.addEntry();
@@ -45,6 +45,10 @@ class Program
             else if (input == "5")
             {
                 Console.WriteLine("Goodbye!");
+            }
+            else
+            {
+                Console.WriteLine("Not a valid option.");
             }
 
         } while (input != "5");
