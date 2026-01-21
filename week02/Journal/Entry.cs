@@ -7,16 +7,9 @@ public class Entry
     public string _entry = "";
     public string _emotion = "";
 
-    public (string, string, string, string) Display()
+
+    public void Display()
     {
-        Console.Write("What emotion are you feeling?");
-        _emotion = Console.ReadLine();
-        PromptGenerator getPrompt = new PromptGenerator();
-        _prompt = getPrompt.GetRandomPrompt();
-        Console.WriteLine(_prompt);
-        _entry = Console.ReadLine();
-        DateTime theCurrentTime = DateTime.Now;
-        _date = theCurrentTime.ToShortDateString();
-        return (_prompt, _entry, _emotion, _date);
+        Console.WriteLine($"Today is {_date} and I am feeling {_emotion}. When asked '{_prompt}', my response was '{_entry}'.");
     }
 }
